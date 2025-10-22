@@ -3,7 +3,7 @@ import { Home } from "./pages/Home";
 import { Destination } from "./pages/Destination";
 import { Crew } from "./pages/Crew";
 import { Technology } from "./pages/Technology";
-import { NavLayout } from "./components/NavLayout";
+import { NavLayout } from "./components/NavLayout/NavLayout";
 
 const basename = "/space-tourism-website/";
 
