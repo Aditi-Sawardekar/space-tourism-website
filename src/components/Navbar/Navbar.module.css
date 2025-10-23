@@ -23,8 +23,10 @@
   padding: 20px 0;
 }
 
-.navLink {
+.navLink,
+.navbar ol li {
   color: white;
+  text-decoration: none;
 }
 
 .menuSection {
@@ -40,7 +42,7 @@
   background-color: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
   backdrop-filter: blur(5px); /* blur background behind menu */
 
-  padding: 136px 32px;
+  padding: 136px 48px;
 }
 
 .menuOpen {

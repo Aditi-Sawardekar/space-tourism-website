@@ -22,7 +22,10 @@ export function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
         />
       </section>
-      <ul className={`${styles.menuSection} ${isOpen ? styles.menuOpen : ""}`}>
+      <ol
+        start={0}
+        className={`${styles.menuSection} ${isOpen ? styles.menuOpen : ""}`}
+      >
         <li className={`text-preset-8 ${styles.navbar}`}>
           <Link to="/" className={styles.navLink}>
             Home
@@ -43,7 +46,7 @@ export function Navbar() {
             Technology
           </Link>
         </li>
-      </ul>
+      </ol>
     </nav>
   );
 }
