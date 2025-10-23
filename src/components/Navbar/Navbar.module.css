@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-between;
   padding: 0 0 1.5rem 0;
+
+  /* Always keep icons visible on top of everything else */
+  position: relative;
+  z-index: 1;
 }
 
 .logo {
@@ -9,7 +13,7 @@
   height: 2.5rem; /* 40px */
 }
 
-.hamburgerIcon {
+.menuToggleIcon {
   width: 1.5rem;
   height: 1.5rem;
   align-self: center;
@@ -21,4 +25,24 @@
 
 .navLink {
   color: white;
+}
+
+.menuSection {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 67.5%;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  backdrop-filter: blur(5px); /* blur background behind menu */
+
+  padding: 136px 32px;
+}
+
+.menuOpen {
+  display: block;
 }

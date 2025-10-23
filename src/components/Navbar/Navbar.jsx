@@ -1,9 +1,13 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import logo from "/assets/shared/logo.svg";
 import hamburgerIcon from "/assets/shared/icon-hamburger.svg";
+import closeIcon from "/assets/shared/icon-close.svg";
 
 export function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className={styles.navbar}>
       <section className={styles.iconSection}>
@@ -12,12 +16,13 @@ export function Navbar() {
         </Link>
 
         <img
-          src={hamburgerIcon}
+          src={isOpen ? closeIcon : hamburgerIcon}
           alt="Open navigation menu"
-          className={styles.hamburgerIcon}
+          className={styles.menuToggleIcon}
+          onClick={() => setIsOpen(!isOpen)}
         />
       </section>
-      <ul className={styles.menuSection}>
+      <ul className={`${styles.menuSection} ${isOpen ? styles.menuOpen : ""}`}>
         <li className={`text-preset-8 ${styles.navbar}`}>
           <Link to="/" className={styles.navLink}>
             Home
