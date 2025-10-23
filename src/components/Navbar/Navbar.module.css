@@ -36,8 +36,6 @@
 }
 
 .menuSection {
-  display: none;
-
   position: fixed;
   top: 0;
   right: 0;
@@ -45,13 +43,17 @@
   width: 67.5%;
   height: 100vh;
 
-  /* Adds a very light semi-transparent overlay with blur behind the menu */
-  background-color: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
+  /* Adds a very light semi-transparent overlay with strong blur behind the menu */
+  background-color: hsl(0 0% 0% / 0.1);
+  backdrop-filter: blur(25px);
 
   padding: 8.5rem 3rem;
+
+  /* Sidebar transition setup: menu is hidden off-screen by default and slides in smoothly when opened */
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
 }
 
 .menuOpen {
-  display: block;
+  transform: translateX(0);
 }
