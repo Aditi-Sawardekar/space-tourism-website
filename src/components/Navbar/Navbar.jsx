@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import logo from "/assets/shared/logo.svg";
 import hamburgerIcon from "/assets/shared/icon-hamburger.svg";
@@ -33,25 +33,45 @@ export function Navbar() {
         start={0}
         className={`${styles.menuSection} ${isOpen ? styles.menuOpen : ""}`}
       >
-        <li className={`text-preset-8 ${styles.navbar}`}>
-          <Link to="/" className={styles.navLink}>
+        <li className={`text-preset-8 ${styles.navItem}`}>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `${styles.navLink} ${isActive ? styles.active : ""}`
+            }
+          >
             Home
-          </Link>
+          </NavLink>
         </li>
-        <li className={`text-preset-8 ${styles.navbar}`}>
-          <Link to="/destination" className={styles.navLink}>
+        <li className={`text-preset-8 ${styles.navItem}`}>
+          <NavLink
+            to="/destination"
+            className={({ isActive }) =>
+              `${styles.navLink} ${isActive ? styles.active : ""}`
+            }
+          >
             Destination
-          </Link>
+          </NavLink>
         </li>
-        <li className={`text-preset-8 ${styles.navbar}`}>
-          <Link to="/crew" className={styles.navLink}>
+        <li className={`text-preset-8 ${styles.navItem}`}>
+          <NavLink
+            to="/crew"
+            className={({ isActive }) =>
+              `${styles.navLink} ${isActive ? styles.active : ""}`
+            }
+          >
             Crew
-          </Link>
+          </NavLink>
         </li>
-        <li className={`text-preset-8 ${styles.navbar}`}>
-          <Link to="/technology" className={styles.navLink}>
+        <li className={`text-preset-8 ${styles.navItem}`}>
+          <NavLink
+            to="/technology"
+            className={({ isActive }) =>
+              `${styles.navLink} ${isActive ? styles.active : ""}`
+            }
+          >
             Technology
-          </Link>
+          </NavLink>
         </li>
       </ol>
     </nav>
