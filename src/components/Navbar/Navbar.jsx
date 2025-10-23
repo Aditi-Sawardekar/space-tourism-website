@@ -6,17 +6,18 @@ import hamburgerIcon from "/assets/shared/icon-hamburger.svg";
 export function Navbar() {
   return (
     <nav className={styles.navbar}>
-      <Link to="/">
-        <img src={logo} alt="Logo" className={styles.logo} />
-      </Link>
+      <section className={styles.iconSection}>
+        <Link to="/">
+          <img src={logo} alt="Logo" className={styles.logo} />
+        </Link>
 
-      <img
-        src={hamburgerIcon}
-        alt="Open navigation menu"
-        className={styles.logo}
-      />
-
-      <ul>
+        <img
+          src={hamburgerIcon}
+          alt="Open navigation menu"
+          className={styles.hamburgerIcon}
+        />
+      </section>
+      <ul className={styles.menuSection}>
         <li className={`text-preset-8 ${styles.navbar}`}>
           <Link to="/" className={styles.navLink}>
             Home
