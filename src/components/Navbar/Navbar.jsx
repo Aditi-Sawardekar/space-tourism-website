@@ -7,6 +7,7 @@ import closeIcon from "/assets/shared/icon-close.svg";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  document.body.style.overflow = isOpen ? "hidden" : "auto";
 
   return (
     <nav className={styles.navbar}>
@@ -15,13 +16,19 @@ export function Navbar() {
           <img src={logo} alt="Logo" className={styles.logo} />
         </Link>
 
-        <img
-          src={isOpen ? closeIcon : hamburgerIcon}
-          alt="Open navigation menu"
-          className={styles.menuToggleIcon}
+        <button
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
           onClick={() => setIsOpen(!isOpen)}
-        />
+          className={styles.menuToggleButton}
+        >
+          <img
+            src={isOpen ? closeIcon : hamburgerIcon}
+            alt=""
+            className={styles.menuToggleIcon}
+          />
+        </button>
       </section>
+
       <ol
         start={0}
         className={`${styles.menuSection} ${isOpen ? styles.menuOpen : ""}`}
