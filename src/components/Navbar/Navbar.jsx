@@ -1,20 +1,41 @@
 import { Link } from "react-router-dom";
+import styles from "./Navbar.module.css";
+import logo from "/assets/shared/logo.svg";
+import hamburgerIcon from "/assets/shared/icon-hamburger.svg";
 
 export function Navbar() {
   return (
-    <nav>
+    <nav className={styles.navbar}>
+      <Link to="/">
+        <img src={logo} alt="Logo" className={styles.logo} />
+      </Link>
+
+      <img
+        src={hamburgerIcon}
+        alt="Open navigation menu"
+        className={styles.logo}
+      />
+
       <ul>
-        <li>
-          <Link to="/">Home</Link>
+        <li className={`text-preset-8 ${styles.navbar}`}>
+          <Link to="/" className={styles.navLink}>
+            Home
+          </Link>
         </li>
-        <li>
-          <Link to="/destination">Destination</Link>
+        <li className={`text-preset-8 ${styles.navbar}`}>
+          <Link to="/destination" className={styles.navLink}>
+            Destination
+          </Link>
         </li>
-        <li>
-          <Link to="/crew">Crew</Link>
+        <li className={`text-preset-8 ${styles.navbar}`}>
+          <Link to="/crew" className={styles.navLink}>
+            Crew
+          </Link>
         </li>
-        <li>
-          <Link to="/technology">Technology</Link>
+        <li className={`text-preset-8 ${styles.navbar}`}>
+          <Link to="/technology" className={styles.navLink}>
+            Technology
+          </Link>
         </li>
       </ul>
     </nav>
