@@ -1,43 +1,79 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import logo from "/assets/shared/logo.svg";
 import hamburgerIcon from "/assets/shared/icon-hamburger.svg";
+import closeIcon from "/assets/shared/icon-close.svg";
 
 export function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  document.body.style.overflow = isOpen ? "hidden" : "auto";
+
   return (
     <nav className={styles.navbar}>
-      <Link to="/">
-        <img src={logo} alt="Logo" className={styles.logo} />
-      </Link>
+      <section className={styles.iconSection}>
+        <Link to="/">
+          <img src={logo} alt="Logo" className={styles.logo} />
+        </Link>
 
-      <img
-        src={hamburgerIcon}
-        alt="Open navigation menu"
-        className={styles.logo}
-      />
+        <button
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          onClick={() => setIsOpen(!isOpen)}
+          className={styles.menuToggleButton}
+        >
+          <img
+            src={isOpen ? closeIcon : hamburgerIcon}
+            alt=""
+            className={styles.menuToggleIcon}
+          />
+        </button>
+      </section>
 
-      <ul>
-        <li className={`text-preset-8 ${styles.navbar}`}>
-          <Link to="/" className={styles.navLink}>
+      <ol
+        start={0}
+        className={`${styles.menuSection} ${isOpen ? styles.menuOpen : ""}`}
+      >
+        <li className={`text-preset-8 ${styles.navItem}`}>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `${styles.navLink} ${isActive ? styles.active : ""}`
+            }
+          >
             Home
-          </Link>
+          </NavLink>
         </li>
-        <li className={`text-preset-8 ${styles.navbar}`}>
-          <Link to="/destination" className={styles.navLink}>
+        <li className={`text-preset-8 ${styles.navItem}`}>
+          <NavLink
+            to="/destination"
+            className={({ isActive }) =>
+              `${styles.navLink} ${isActive ? styles.active : ""}`
+            }
+          >
             Destination
-          </Link>
+          </NavLink>
         </li>
-        <li className={`text-preset-8 ${styles.navbar}`}>
-          <Link to="/crew" className={styles.navLink}>
+        <li className={`text-preset-8 ${styles.navItem}`}>
+          <NavLink
+            to="/crew"
+            className={({ isActive }) =>
+              `${styles.navLink} ${isActive ? styles.active : ""}`
+            }
+          >
             Crew
-          </Link>
+          </NavLink>
         </li>
-        <li className={`text-preset-8 ${styles.navbar}`}>
-          <Link to="/technology" className={styles.navLink}>
+        <li className={`text-preset-8 ${styles.navItem}`}>
+          <NavLink
+            to="/technology"
+            className={({ isActive }) =>
+              `${styles.navLink} ${isActive ? styles.active : ""}`
+            }
+          >
             Technology
-          </Link>
+          </NavLink>
         </li>
-      </ul>
+      </ol>
     </nav>
   );
 }
