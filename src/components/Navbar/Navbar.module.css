@@ -66,3 +66,51 @@
 .menuOpen {
   transform: translateX(0);
 }
+
+@media (min-width: 600px) {
+  .menuToggleButton {
+    display: none;
+  }
+
+  .logo {
+    width: 3rem; /* 48px */
+    height: 3rem; /* 48px */
+  }
+
+  .iconSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem 0 0;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menuSection {
+    /* Hide sidebar and disable its animation on tablet and larger screens */
+    transform: none;
+    transition: none;
+
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4rem;
+
+    width: 600px;
+    height: 6rem;
+    padding: 0;
+
+    background-color: hsl(0, 0%, 100%, 0.05);
+  }
+
+  .active {
+    border-right: none;
+    text-decoration: underline;
+    text-underline-offset: 2.25rem;
+    text-decoration-thickness: 0.25rem;
+  }
+}
