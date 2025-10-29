@@ -9,6 +9,6 @@
 
 @media (min-width: 600px) {
   .layout {
-    padding: 0 2.5rem; /* 40px */
+    padding: 0 0 0 2.5rem; /* 40px */
   }
 }
