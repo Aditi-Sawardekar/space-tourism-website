@@ -16,6 +16,8 @@ export function Navbar() {
           <img src={logo} alt="Logo" className={styles.logo} />
         </Link>
 
+        <hr className={styles.hrLine} />
+
         <button
           aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
           onClick={() => setIsOpen(!isOpen)}

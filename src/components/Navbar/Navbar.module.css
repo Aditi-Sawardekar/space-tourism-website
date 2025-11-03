@@ -13,6 +13,10 @@
   height: 2.5rem; /* 40px */
 }
 
+.hrLine {
+  display: none;
+}
+
 .menuToggleButton {
   border: none;
   cursor: pointer;
@@ -51,6 +55,7 @@
 
   width: 67.5%;
   height: 100vh;
+  max-width: 310px;
 
   /* Adds a very light semi-transparent overlay with strong blur behind the menu */
   background-color: hsl(0 0% 0% / 0.1);
@@ -67,7 +72,7 @@
   transform: translateX(0);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .menuToggleButton {
     display: none;
   }
@@ -81,7 +86,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem 0 0;
+    padding: 0 2.5rem;
   }
 
   .navbar {
@@ -104,6 +109,7 @@
 
     width: 600px;
     height: 6rem;
+    max-width: none;
     padding: 0 2.5rem;
 
     background-color: hsl(0, 0%, 100%, 0.05);
@@ -114,5 +120,25 @@
     text-decoration: underline;
     text-underline-offset: 2.25rem;
     text-decoration-thickness: 0.25rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .navbar {
+    padding-top: 2.5rem;
+  }
+
+  .iconSection {
+    padding: 0 0 0 4rem;
+    gap: 4rem;
+  }
+
+  .hrLine {
+    display: block;
+    width: 38.8vw;
+    height: 1px;
+    margin-right: -2.5rem;
+    background-color: hsl(0, 0%, 100%, 0.25);
+    border: none;
   }
 }
