@@ -4,7 +4,7 @@ import styles from "./ButtonSection.module.css";
 
 export function ButtonSection() {
   return (
-    <section>
+    <section className={styles.buttonSection}>
       <ExploreButton />
     </section>
   );

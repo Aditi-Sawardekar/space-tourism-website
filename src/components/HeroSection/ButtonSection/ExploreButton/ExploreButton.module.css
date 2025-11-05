@@ -1,1 +1,13 @@
+.exploreButton {
+  width: clamp(100px, 38.4vw, 144px);
+  height: clamp(100px, 38.4vw, 144px);
+  border-radius: 50%;
+  border: none;
+  text-transform: uppercase;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: clamp(12px, 4vw, 20px);
+}
