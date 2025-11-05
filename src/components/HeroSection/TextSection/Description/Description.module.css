@@ -1,1 +1,4 @@
-
+.description {
+  font-size: clamp(14px, 4vw, 20px);
+  color: hsl(231, 77%, 90%);
+}

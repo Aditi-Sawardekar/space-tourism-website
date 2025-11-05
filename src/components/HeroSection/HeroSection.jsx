@@ -6,7 +6,7 @@ import styles from "./HeroSection.module.css";
 export function HeroSection() {
   return (
     <>
-      <main>
+      <main className={styles.heroSection}>
         <TextSection />
         <ButtonSection />
       </main>

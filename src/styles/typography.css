@@ -6,7 +6,7 @@
 .text-preset-1 {
   font-family: "Bellefair", serif;
   font-size: 9rem; /* 144px */
-  line-height: 171.9%;
+  line-height: 1.5;
   letter-spacing: 0;
 }
 
@@ -41,7 +41,7 @@
 .text-preset-6 {
   font-family: "Bellefair", serif;
   font-size: 1.75rem; /* 28px */
-  line-height: 32.1%;
+  line-height: 1.15;
   letter-spacing: 0;
 }
 
@@ -62,6 +62,6 @@
 .text-preset-9 {
   font-family: "Barlow", sans-serif;
   font-size: 1.125rem; /* 18px */
-  line-height: 180%;
+  line-height: 1.8;
   letter-spacing: 0;
 }

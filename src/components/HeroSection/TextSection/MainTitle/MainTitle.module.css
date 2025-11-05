@@ -1,1 +1,4 @@
-
+.mainTitle {
+  font-size: clamp(62px, 12.5vw, 144px);
+  font-weight: 400;
+}

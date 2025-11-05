@@ -6,7 +6,7 @@ import styles from "./TextSection.module.css";
 
 export function TextSection() {
   return (
-    <section>
+    <section className={styles.textSection}>
       <IntroText />
       <MainTitle />
       <Description />
