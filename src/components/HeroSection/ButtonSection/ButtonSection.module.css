@@ -5,3 +5,9 @@
   align-items: center;
   flex: 1;
 }
+
+@media (min-width: 768px) {
+  .buttonSection {
+    justify-content: flex-end;
+  }
+}

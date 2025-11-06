@@ -2,3 +2,10 @@
   font-size: clamp(62px, 12.5vw, 144px);
   font-weight: 400;
 }
+
+@media (min-width: 768px) {
+  .mainTitle {
+    font-size: clamp(62px, 17.25vw, 150px);
+    line-height: 1.25;
+  }
+}

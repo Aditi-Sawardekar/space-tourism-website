@@ -11,3 +11,11 @@
 
   font-size: clamp(12px, 4vw, 20px);
 }
+
+@media (min-width: 768px) {
+  .exploreButton {
+    width: clamp(144px, 35.4vw, 272px);
+    height: clamp(144px, 35.4vw, 272px);
+    font-size: clamp(20px, 4.17vw, 32px);
+  }
+}
