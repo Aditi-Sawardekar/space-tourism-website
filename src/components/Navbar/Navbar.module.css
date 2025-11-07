@@ -1,7 +1,7 @@
 .iconSection {
   display: flex;
   justify-content: space-between;
-  padding: 0 0 1.5rem 0;
+  padding: 0 0 1.25rem 0; /* 20px */
 
   /* Always keep icons visible on top of everything else */
   position: relative;
@@ -24,13 +24,13 @@
 }
 
 .menuToggleIcon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.5rem; /* 24px */
+  height: 1.5rem; /* 24px */
   align-self: center;
 }
 
 .navItem {
-  padding: 20px 0;
+  padding: 1.25rem 0; /* 20px */
   color: white;
 }
 
@@ -55,13 +55,13 @@
 
   width: 67.5%;
   height: 100vh;
-  max-width: 310px;
+  max-width: 19.375rem; /* 310px */
 
   /* Adds a very light semi-transparent overlay with strong blur behind the menu */
   background-color: hsl(0 0% 0% / 0.1);
   backdrop-filter: blur(25px);
 
-  padding: 8.5rem 3rem;
+  padding: 8.5rem 3rem; /* 136px 48px */
 
   /* Sidebar transition setup: menu is hidden off-screen by default and slides in smoothly when opened */
   transform: translateX(100%);
@@ -86,7 +86,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2.5rem;
+    padding: 0 2.5rem; /* 40px */
   }
 
   .navbar {
@@ -104,13 +104,13 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 4rem;
+    gap: 4rem; /* 64px */
     flex: 1;
 
-    width: 600px;
-    height: 6rem;
+    width: 37.5rem; /* 600px */
+    height: 6rem; /* 96px */
     max-width: none;
-    padding: 0 2.5rem;
+    padding: 0 2.5rem; /* 40px */
 
     background-color: hsl(0, 0%, 100%, 0.05);
   }
@@ -118,26 +118,26 @@
   .active {
     border-right: none;
     text-decoration: underline;
-    text-underline-offset: 2.25rem;
-    text-decoration-thickness: 0.25rem;
+    text-underline-offset: 2.25rem; /* 36px */
+    text-decoration-thickness: 0.25rem; /* 4px */
   }
 }
 
 @media (min-width: 1440px) {
   .navbar {
-    padding-top: 2.5rem;
+    padding-top: 2.5rem; /* 40px */
   }
 
   .iconSection {
-    padding: 0 0 0 4rem;
-    gap: 4rem;
+    padding: 0 0 0 4rem; /* 64px */
+    gap: 4rem; /* 64px */
   }
 
   .hrLine {
     display: block;
     width: 38.8vw;
     height: 1px;
-    margin-right: -2.5rem;
+    margin-right: -2.5rem; /* -40px */
     background-color: hsl(0, 0%, 100%, 0.25);
     border: none;
   }

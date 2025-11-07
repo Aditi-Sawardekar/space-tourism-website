@@ -1,0 +1,21 @@
+.buttonSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .buttonSection {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1440px) {
+  .buttonSection {
+    height: 40vh;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}

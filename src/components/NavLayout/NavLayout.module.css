@@ -5,6 +5,19 @@
   width: 100%;
 
   padding: 1.5rem; /* 24px */
+
+  display: flex;
+  flex-direction: column;
+  /* 
+  Apply flex to the layout and flex: 1 to the main (Outlet) 
+  so that the child pages take up the remaining space below the navbar.
+*/
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {

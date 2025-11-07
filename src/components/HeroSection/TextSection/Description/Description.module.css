@@ -1,0 +1,11 @@
+.description {
+  font-size: clamp(0.875rem, 4vw, 1.25rem); /* 14px, 4vw, 20px */
+  color: hsl(231, 77%, 90%);
+}
+
+@media (min-width: 768px) {
+  .description {
+    font-size: clamp(0.875rem, 2.15vw, 1.25rem); /* 14px, 2.15vw, 20px */
+    line-height: 1.75;
+  }
+}

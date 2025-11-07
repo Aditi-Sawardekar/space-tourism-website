@@ -1,0 +1,11 @@
+.introText {
+  font-size: clamp(0.75rem, 4vw, 1.75rem); /* 12px, 4vw, 28px */
+  text-transform: uppercase;
+  color: hsl(231, 77%, 90%);
+}
+
+@media (min-width: 768px) {
+  .introText {
+    font-size: clamp(0.75rem, 4vw, 1.75rem); /* 12px, 4vw, 28px */
+  }
+}

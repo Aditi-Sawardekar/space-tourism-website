@@ -1,0 +1,21 @@
+.exploreButton {
+  width: clamp(100px, 38.4vw, 144px);
+  height: clamp(100px, 38.4vw, 144px);
+  border-radius: 50%;
+  border: none;
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: clamp(12px, 4vw, 20px);
+}
+
+@media (min-width: 768px) {
+  .exploreButton {
+    width: clamp(9rem, 35.4vw, 17rem); /* 144px, 35.4vw, 272px */
+    height: clamp(9rem, 35.4vw, 17rem); /* 144px, 35.4vw, 272px */
+    font-size: clamp(1.25rem, 4.17vw, 2rem); /* 20px, 4.17vw, 32px */
+  }
+}
