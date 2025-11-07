@@ -5,7 +5,7 @@
 
 @media (min-width: 768px) {
   .mainTitle {
-    font-size: clamp(62px, 17.25vw, 150px);
-    line-height: 1.25;
+    font-size: clamp(62px, 17.25vw, 144px);
+    line-height: 1.15;
   }
 }

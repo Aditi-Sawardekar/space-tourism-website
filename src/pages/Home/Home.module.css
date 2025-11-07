@@ -7,6 +7,12 @@
 
 @media (min-width: 768px) {
   .homePage {
-    margin: 128px;
+    margin: 8rem; /*128px */
+  }
+}
+
+@media (min-width: 1440px) {
+  .homePage {
+    margin: 8rem; /*128px */
   }
 }

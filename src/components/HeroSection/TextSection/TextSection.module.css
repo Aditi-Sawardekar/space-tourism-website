@@ -5,3 +5,11 @@
   text-align: center;
   gap: 24px;
 }
+
+@media (min-width: 1440px) {
+  .textSection {
+    width: 50%;
+    align-items: flex-start;
+    text-align: start;
+  }
+}

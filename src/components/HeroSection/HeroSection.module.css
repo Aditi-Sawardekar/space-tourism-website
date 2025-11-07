@@ -2,3 +2,11 @@
   display: flex;
   flex: 1;
 }
+
+@media (min-width: 1440px) {
+  .heroSection {
+    margin: 0 2rem; /* 32px */
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}

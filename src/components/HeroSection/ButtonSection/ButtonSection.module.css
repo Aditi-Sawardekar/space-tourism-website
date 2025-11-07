@@ -11,3 +11,11 @@
     justify-content: flex-end;
   }
 }
+
+@media (min-width: 1440px) {
+  .buttonSection {
+    height: 40vh;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
