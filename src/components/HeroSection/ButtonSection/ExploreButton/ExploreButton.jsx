@@ -1,7 +1,12 @@
 import styles from "./ExploreButton.module.css";
 
-export function ExploreButton() {
+export function ExploreButton({ label, onClick }) {
   return (
-    <button className={`${styles.exploreButton} text-preset-4`}>Explore</button>
+    <button
+      className={`${styles.exploreButton} text-preset-4`}
+      onClick={onClick}
+    >
+      {label}
+    </button>
   );
 }
