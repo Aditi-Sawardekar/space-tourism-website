@@ -1,11 +1,11 @@
 .mainTitle {
-  font-size: clamp(62px, 12.5vw, 144px);
+  font-size: clamp(3.875rem, 12.5vw, 9rem); /* 62px, 12.5vw, 144px */
   font-weight: 400;
 }
 
 @media (min-width: 768px) {
   .mainTitle {
-    font-size: clamp(62px, 17.25vw, 144px);
+    font-size: clamp(3.875rem, 17.25vw, 9rem); /* 62px, 17.25vw, 144px */
     line-height: 1.15;
   }
 }
